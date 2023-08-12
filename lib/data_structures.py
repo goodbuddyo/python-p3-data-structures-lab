@@ -54,19 +54,23 @@ def get_spiciest_foods(spicy_foods):
 def print_spicy_foods(spicy_foods):
     for i in spicy_foods:
         heatcount = int(i['heat_level'])
-        print(i['name'], '(', end='')
-        print(i['cuisine'], end='')
-        print(') | Heat Level: ', end='')
+        # print(i['name'], '(', end='')
+        # print(i['cuisine'], end='')
+        # print(') | Heat Level: ', end='')
         # for h in range(heatcount):
-        #    print('🌶', end='')
-        print('🌶'*heatcount, end='')
-        print('', end='\n')
+        # print('🌶', end='')
+        # print('🌶'*heatcount, end='')
+        # print('', end='\n')
+        peppers = '🌶'*heatcount
+        print(f"{i['name']} ({i['cuisine']}) | Heat Level: {peppers}")
 
 
-# print_spicy_foods(spicy_foods)
+print_spicy_foods(spicy_foods)
 
 #  takes a list of spicy_foods and a string representing a cuisine,
 # and returns a single dictionary for the spicy food whose cuisine matches the cuisine string passed in.
+
+
 def get_spicy_food_by_cuisine(spicy_foods, cuisine):
     for i in spicy_foods:
         my_cuisine = i['cuisine']
